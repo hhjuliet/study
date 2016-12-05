@@ -19,19 +19,21 @@ within() 限制连接点匹配指定的类型
 
 创建切点：
 ![spring1](https://github.com/hhjuliet/study/blob/master/img/spring1.jpg)
-<table border="1">
-	<tr>
-		<th>Heading</th>
-		<th>Another Heading</th>
-	</tr>
-	<tr>
-		<td>row 1, cell 1</td>
-		<td>row 1, cell 2</td>
-	</tr>
-	<tr>
-		<td>row 2, cell 1</td>
-		<td>row 2, cell 2</td>
-	</tr>
-</table>
+<div style="display:inline-block;">
+	<table border="1">
+		<tr>
+			<th>Heading</th>
+			<th>Another Heading</th>
+		</tr>
+		<tr>
+			<td>row 1, cell 1</td>
+			<td>row 1, cell 2</td>
+		</tr>
+		<tr>
+			<td>row 2, cell 1</td>
+			<td>row 2, cell 2</td>
+		</tr>
+	</table>
+</div>
 切面：
 
