@@ -14,7 +14,24 @@ target 限制连接点匹配目标对象为指定类型的类
 within() 限制连接点匹配指定的类型
 @within() 限制连接点匹配指定注解所标注的类型（当使用Spring AOP时，方法定义在由指定的注解所标注的类里）
 @annotation 限定匹配带有指定注解的连接点
+
 1、编写切点
+
+创建切点：
 ![spring1](https://github.com/hhjuliet/study/blob/master/img/spring1.jpg)
+<table border="1">
+	<tr>
+		<th>Heading</th>
+		<th>Another Heading</th>
+	</tr>
+	<tr>
+		<td>row 1, cell 1</td>
+		<td>row 1, cell 2</td>
+	</tr>
+	<tr>
+		<td>row 2, cell 1</td>
+		<td>row 2, cell 2</td>
+	</tr>
+</table>
 切面：
 
