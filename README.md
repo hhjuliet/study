@@ -4,7 +4,7 @@ AOP
 
 Spring借助AspectJ的切点表达式语言来定义Spring切面
 
-AspectJ指示器 描　　述
+ 
 arg() 限制连接点匹配参数为指定类型的执行方法
 @args() 限制连接点匹配参数由指定注解标注的执行方法
 execution() 用于匹配是连接点的执行方法
@@ -22,11 +22,11 @@ within() 限制连接点匹配指定的类型
 <div style="display:inline">
 	<table>
 		<tr>
-			<th>Heading</th>
-			<th>Another Heading</th>
+			<th>AspectJ指示器</th>
+			<th>描　　述</th>
 		</tr>
 		<tr>
-			<td>row 1, cell 1</td>
+			<td>arg()</td>
 			<td>row 1, cell 2</td>
 		</tr>
 		<tr>
