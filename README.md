@@ -16,7 +16,6 @@ Spring借助AspectJ的切点表达式语言来定义Spring切面
 1、编写切点
 
 创建切点：
-![spring1](https://github.com/hhjuliet/study/blob/master/img/spring1.jpg)
 
 ```Java
 package concert;
@@ -25,6 +24,8 @@ public interface Performance{
 	public void perform();
 }
 ```
+![aspectj](/img/aspectj1.jpg)
+
 <div style="display:inline">
 	<table>
 		<tr>
@@ -70,4 +71,7 @@ public interface Performance{
 	</table>
 </div>
 切面：
+
+编写切点：
+
 
