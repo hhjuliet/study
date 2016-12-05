@@ -18,13 +18,13 @@ Spring借助AspectJ的切点表达式语言来定义Spring切面
 创建切点：
 ![spring1](https://github.com/hhjuliet/study/blob/master/img/spring1.jpg)
 
-'''
+```Java
 package concert;
 
 public interface Performance{
 	public void perform();
 }
-'''
+```
 <div style="display:inline">
 	<table>
 		<tr>
