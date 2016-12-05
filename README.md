@@ -4,16 +4,14 @@ AOP
 
 Spring借助AspectJ的切点表达式语言来定义Spring切面
 
+
+
+
  
-arg() 限制连接点匹配参数为指定类型的执行方法
-@args() 限制连接点匹配参数由指定注解标注的执行方法
-execution() 用于匹配是连接点的执行方法
-this() 限制连接点匹配AOP代理的bean引用为指定类型的类
-target 限制连接点匹配目标对象为指定类型的类
-@target() 限制连接点匹配特定的执行对象，这些对象对应的类要具有指定类型的注解
-within() 限制连接点匹配指定的类型
-@within() 限制连接点匹配指定注解所标注的类型（当使用Spring AOP时，方法定义在由指定的注解所标注的类里）
-@annotation 限定匹配带有指定注解的连接点
+ 
+ 
+ 
+ 
 
 1、编写切点
 
@@ -27,11 +25,39 @@ within() 限制连接点匹配指定的类型
 		</tr>
 		<tr>
 			<td>arg()</td>
-			<td>row 1, cell 2</td>
+			<td>限制连接点匹配参数为指定类型的执行方法</td>
 		</tr>
 		<tr>
-			<td>row 2, cell 1</td>
-			<td>row 2, cell 2</td>
+			<td>@args()</td>
+			<td>限制连接点匹配参数由指定注解标注的执行方法</td>
+		</tr>
+		<tr>
+			<td>execution()</td>
+			<td>用于匹配是连接点的执行方法</td>
+		</tr>
+		<tr>
+			<td>this()</td>
+			<td>限制连接点匹配AOP代理的bean引用为指定类型的类</td>
+		</tr>
+		<tr>
+			<td>target</td>
+			<td>限制连接点匹配目标对象为指定类型的类</td>
+		</tr>
+		<tr>
+			<td>@target()</td>
+			<td限制连接点匹配特定的执行对象，这些对象对应的类要具有指定类型的注解>限制连接点匹配特定的执行对象，这些对象对应的类要具有指定类型的注解</td>
+		</tr>
+		<tr>
+			<td>within()</td>
+			<td>限制连接点匹配指定的类型</td>
+		</tr>
+		<tr>
+			<td>@within()</td>
+			<td>限制连接点匹配指定注解所标注的类型（当使用Spring AOP时，方法定义在由指定的注解所标注的类里）</td>
+		</tr>
+		<tr>
+			<td>@annotation</td>
+			<td>限定匹配带有指定注解的连接点</td>
 		</tr>
 	</table>
 </div>
