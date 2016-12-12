@@ -90,3 +90,14 @@ A construct for selecting join points（构造选择标识点的表达式）：�
 A construct to alter program behavior（构造程序的行为）：切点选择以后，描述这些切点的一些特定行为，称为advice，添加before、around、after..</br>
 Constructs to alter static structure of the system（改变系统静态结构）：有效的实现横切的功能，例如，需要引入日志去追踪每个类，创建内部类型的声明inter-type declaration，使得这样的修改成为可能。在某些情况下，你可能需要监测特定的状态，典型的情况是特定切入点的存在，在执行这个系统之前，允许织入时的声明weave-time declaration的构建使这个成为可能...相同的是，所有这些机器和static crosscutting相关，因为他们对静态结构的影响...和动态改变系统执行的行为相反...</br>
 A module to express all crosscutting constructs表达所有横切构造的模型：切片最终是用来改变整个系统的结构，一个切片包含切点、advice、和静态横切的构建，它可能和其他切片相关联正如类和其他类相关联一样...</br>
+![aspectjstructure](/img/1.jpg)
+
+<h3>AOP的实现</h3>
+spring AOP:spring为了满足企业应用的需求，它基于拦截器interceptors机制和代理设计机制包含了AOP系统，早期的spring提供了一种复杂的编程模型，新的编程模型基于Aspectj提供了一种更好的编程体验，并使得spring的用户能无压力的编写定制的切片...</br>
+<h4>设计模式</h4>
+设计模式给横切的概念提供了解决方案，观察者模式、责任链模式、装饰者模式、代理模式、和拦截器模式、这些都对横切的概念有所帮助，AOP和这些模式之间有一些相似之处...</br>
+<h4>观察者模式</h4>
+观察者模式主要是解耦合subject和observer，（observer需要对subject的改变做出响应），AOP的advice可能想一个事件响应器，但有很明显的不同，首先，在subject类中没有notify\<changeType\>()的调用，其次，advice解耦合了主题和观察者模式的逻辑。结果，你可以创建之前没有计划的通告，使系统更有拓展性。第二，在AOP中切点收集到的上下文更加灵活，切点可以收集advice逻辑需要的合适的上下文。如果是一个事件模型，你将传送你所需要的所有上下文。</br>
+<h4>责任链模式</h4>
+责任链模式（COR pattern）放置一串处理对象在目标对象之前。在唤醒目标对象之前或之后，在链中的对象将执行附加的工作。</br>
+成功使用COR模式需要两个前提，首先，只有一个或很少数量的目标方法。第二，相关的架构应该支持这个模式。例如，在servlet框架中，过滤器的实现使用了COR模式，因为它确实满足以上两个要求，1.它只作用于doservice()方法，并且过滤器管理的代码是以架构的一部分实现的。</br>
