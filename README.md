@@ -89,4 +89,4 @@ Identifiable points in the execution of the system（标识点）：系统在程
 A construct for selecting join points（构造选择标识点的表达式）：实现横切的概念，例如，仅选择public方法去切...称为切点pointcut</br>
 A construct to alter program behavior（构造程序的行为）：切点选择以后，描述这些切点的一些特定行为，称为advice，添加before、around、after..</br>
 Constructs to alter static structure of the system（改变系统静态结构）：有效的实现横切的功能，例如，需要引入日志去追踪每个类，创建内部类型的声明inter-type declaration，使得这样的修改成为可能。在某些情况下，你可能需要监测特定的状态，典型的情况是特定切入点的存在，在执行这个系统之前，允许织入时的声明weave-time declaration的构建使这个成为可能...相同的是，所有这些机器和static crosscutting相关，因为他们对静态结构的影响...和动态改变系统执行的行为相反...</br>
-A module to express all crosscutting constructs表达所有横切构造的模型：</br>
+A module to express all crosscutting constructs表达所有横切构造的模型：切片最终是用来改变整个系统的结构，一个切片包含切点、advice、和静态横切的构建，它可能和其他切片相关联正如类和其他类相关联一样...</br>
