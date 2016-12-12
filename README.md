@@ -104,4 +104,9 @@ spring AOP:spring为了满足企业应用的需求，它基于拦截器intercept
 ![CORpattern](/img/2.jpg)
 </br>
 <h4>装饰者和代理模式</h4>
-装饰者和代理模式使用一个包装对象可以在之前之后或者围绕调用的包装的对象做一些事情，或者它的表达方式，正如图1.9所示。这个附加的工作可以支持横切，
+装饰者和代理模式使用一个包装对象可以在之前之后或者围绕调用的包装的对象做一些事情，或者它的表达方式，正如图1.9所示。这个附加的工作可以支持横切。
+<h4>拦截器模式</h4>
+ Interceptor：（上次用到 Interceptor概念还是springmvc的拦截器），可以去看一下...
+ 
+ Aspectj安装：
+ eclipse安装非常简单，查看eclipse版本号，下载http://www.eclipse.org/ajdt/downloads/ 对应eclipse版本的aspectj，然后按照http://stackoverflow.com/questions/8568508/how-to-configure-aspectj-for-eclipse 安装就好了
