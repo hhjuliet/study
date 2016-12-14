@@ -110,3 +110,23 @@ spring AOP:spring为了满足企业应用的需求，它基于拦截器intercept
  
  Aspectj安装：
  eclipse安装非常简单，查看eclipse版本号，下载http://www.eclipse.org/ajdt/downloads/ 对应eclipse版本的aspectj，然后按照http://stackoverflow.com/questions/8568508/how-to-configure-aspectj-for-eclipse 安装就好了
+ 
+ <h4>Aspectj中this()和target()、args()的区别：</h4>
+ this(Account):选择任何instanceof Account类的切入点，this选择所有的切入点，例如方法调用和字段分配，只要当前执行的对象是Account或者Account的子类--SavingAccount。</br>
+ 
+ target(Account):选择任何对象，它的方法的调用对象是instanceof Account</br>
+ 
+ within()和this()区别：前者match当一个对象跟pointcut中的表达式相匹配的时候，下面的代码展示了不同性。</br>
+ ![aspectjstructure](/img/3.jpg)</br>
+ 
+ 获取传入参数的办法：</br>
+```(java)
+ void around(String param) : args(param) && other pointcut pattern</br>
+ ```
+ 获取当前返回值:</br>
+ ```(java)
+ Object around(): other pointcut pattern {
+		Object value = proceed();
+}
+```
+ 
