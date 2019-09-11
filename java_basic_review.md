@@ -137,7 +137,7 @@ class SingletonLazy2 {
 ```
 class SingletonLazy5 {
 
-	private static SingletonLazy5 singletonLazy;
+	private volatile static SingletonLazy5 singletonLazy;
 
 	private SingletonLazy5() {
 
